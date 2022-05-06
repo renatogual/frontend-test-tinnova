@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white: #fff;
+  --black: #000;
+
+  --input-without-focus: #efeeed;
+  --input-with-focus: #333333;
+  --input-border: #efeeed;
+  --input-validation: #eb4a46;
+
+  --button-without-focus: #dddcdc;
+  --background-button: #00c8b3;
+  --background-button-disabled: #f6f6f6;
+}
+
+@media (max-width: 1080px) {
+  html {
+    font-size: 93.75%;
+  }
+}
+
+@media (max-width: 720px) {
+  html {
+    font-size: 87.5%;
+  }
+}
+
+body,
+input,
+button {
+  font: 400 1rem 'Roboto', sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
