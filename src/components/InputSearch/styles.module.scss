@@ -12,7 +12,7 @@
   svg {
     z-index: 10;
     outline: none;
-    color: var(--input-with-focus);
+    color: var(--input-placeholder);
   }
 
   input {
@@ -23,7 +23,7 @@
 
     &::placeholder {
       font-style: italic;
-      color: var(--input-with-focus);
+      color: var(--input-placeholder);
     }
   }
 }
