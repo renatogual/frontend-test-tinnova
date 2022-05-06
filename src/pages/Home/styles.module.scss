@@ -1,0 +1,44 @@
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.content {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.headerContent {
+  margin-bottom: 2rem;
+
+  h1 {
+    margin-bottom: 1rem;
+  }
+}
+
+.actions {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+
+  button {
+    min-width: 10rem;
+    height: 2.5rem;
+    border: 0;
+    border-radius: 4px;
+    background-color: var(--white);
+
+    display: grid;
+    place-items: center;
+
+    transition: filter 0.2s;
+
+    &:hover {
+      filter: brightness(0.8);
+    }
+  }
+}

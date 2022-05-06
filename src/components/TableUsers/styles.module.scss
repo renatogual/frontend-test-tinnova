@@ -1,0 +1,40 @@
+.tableContent {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 0.5rem;
+
+  thead {
+    font-size: 0.75rem;
+    color: var(--input-with-focus);
+
+    th {
+      text-align: start;
+    }
+
+    th:first-child {
+      padding-left: 1.225rem;
+    }
+  }
+
+  tbody {
+    tr {
+      height: 5.5rem;
+      border-radius: 4px;
+      background-color: var(--white);
+
+      td {
+        font-weight: bold;
+      }
+
+      td:first-child {
+        padding-left: 1.225rem;
+      }
+
+      transition: filter 0.2s;
+    }
+  }
+
+  tr:hover {
+    filter: brightness(0.9);
+  }
+}
