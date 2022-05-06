@@ -43,9 +43,9 @@ export function Home() {
 
       return (
         user.name.toLowerCase().includes(value) ||
-        user.cpf.includes(value) ||
-        user.phone.includes(value) ||
-        user.email.includes(value)
+        String(user.cpf).toLowerCase().includes(value) ||
+        String(user.phone).toLowerCase().includes(value) ||
+        user.email.toLowerCase().includes(value)
       );
     });
 

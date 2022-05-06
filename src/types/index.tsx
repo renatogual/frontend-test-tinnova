@@ -1,6 +1,6 @@
 export interface UserProps {
   name: string;
-  cpf: string;
-  phone: string;
+  cpf: number;
+  phone: number;
   email: string;
 }
