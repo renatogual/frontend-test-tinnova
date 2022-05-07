@@ -71,8 +71,6 @@ export function Form() {
   const cpfWatch = watch("cpf");
   const phoneWatch = watch("phone");
 
-  console.log(cpfWatch);
-
   function onSubmit(data: UserProps) {
     setLoading(true);
 
