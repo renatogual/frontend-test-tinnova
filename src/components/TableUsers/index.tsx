@@ -33,10 +33,16 @@ export function TableUsers({ items, onEditUser, onRemoveUser }: Props) {
               <td>{phoneMask(phone)}</td>
               <td>
                 <div className={styles.actions}>
-                  <button onClick={() => onEditUser(cpf)}>
+                  <button
+                    onClick={() => onEditUser(cpf)}
+                    data-testid={`edit-${cpf}`}
+                  >
                     <FiEdit />
                   </button>
-                  <button onClick={() => onRemoveUser(cpf)}>
+                  <button
+                    onClick={() => onRemoveUser(cpf)}
+                    data-testid={`remove-${cpf}`}
+                  >
                     <FiTrash />
                   </button>
                 </div>
