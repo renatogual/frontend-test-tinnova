@@ -1,35 +1,53 @@
+import { FiEdit, FiTrash } from "react-icons/fi";
+
 import { UserProps } from "../../types";
+import { cpfMask, phoneMask } from "../../utils/inputMaks";
 
 import styles from "./styles.module.scss";
 
 interface Props {
   items: UserProps[];
+  onEditUser: (cpf: string) => void;
+  onRemoveUser: (cpf: string) => void;
 }
 
-export function TableUsers({ items }: Props) {
+export function TableUsers({ items, onEditUser, onRemoveUser }: Props) {
   return (
     <table className={styles.tableContent}>
       <thead>
         <tr>
-          <th className={styles.infos}>Nome</th>
-          <th className={styles.infos}>CPF</th>
-          <th className={styles.infos}>Telefone</th>
-          <th className={styles.infos}>E-mail</th>
+          <th>Nome</th>
+          <th>E-mail</th>
+          <th>CPF</th>
+          <th>Telefone</th>
+          <th>Ações</th>
         </tr>
       </thead>
       <tbody>
         {!!items.length ? (
-          items?.map(({ name, cpf, phone, email }) => (
-            <tr key={cpf} data-testid="row-character">
+          items?.map(({ name, email, cpf, phone }) => (
+            <tr key={cpf}>
               <td>{name}</td>
-              <td>{cpf}</td>
-              <td>{phone}</td>
               <td>{email}</td>
+              <td>{cpfMask(cpf)}</td>
+              <td>{phoneMask(phone)}</td>
+              <td>
+                <div className={styles.actions}>
+                  <button onClick={() => onEditUser(cpf)}>
+                    <FiEdit />
+                  </button>
+                  <button onClick={() => onRemoveUser(cpf)}>
+                    <FiTrash />
+                  </button>
+                </div>
+              </td>
             </tr>
           ))
         ) : (
           <tr>
-            <td colSpan={4}>Não foram encontrados dados !</td>
+            <td colSpan={5} className={styles.without_data}>
+              Não foram encontrados dados !
+            </td>
           </tr>
         )}
       </tbody>

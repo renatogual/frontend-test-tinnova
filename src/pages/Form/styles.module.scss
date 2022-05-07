@@ -1,0 +1,30 @@
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.content {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 2rem;
+
+  h1 {
+    margin-bottom: 1rem;
+  }
+}
+
+.buttons {
+  margin-top: 2rem;
+
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+@media (max-width: 720px) {
+  .buttons {
+    flex-direction: column;
+  }
+}

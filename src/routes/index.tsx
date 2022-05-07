@@ -8,7 +8,9 @@ export function Routes() {
     <BrowserRouter>
       <Router>
         <Route path="/" element={<Home />} />
-        <Route path="form" element={<Form />} />
+        <Route path="form" element={<Form />}>
+          <Route path=":cpf" element={<Form />} />
+        </Route>
       </Router>
     </BrowserRouter>
   );

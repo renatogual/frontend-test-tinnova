@@ -1,0 +1,36 @@
+.container {
+  width: 250px;
+  height: 3rem;
+  border-radius: 2rem;
+  background: var(--white);
+  border: 0;
+  padding: 0 1.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--black);
+  font-weight: bold;
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  svg:first-child {
+    margin-right: 1rem;
+  }
+
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+@media (max-width: 720px) {
+  .container {
+    width: 100%;
+  }
+}

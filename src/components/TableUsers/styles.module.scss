@@ -2,6 +2,7 @@
   width: 100%;
   border-collapse: separate;
   border-spacing: 0 0.5rem;
+  overflow: auto;
 
   thead {
     font-size: 0.75rem;
@@ -36,5 +37,57 @@
 
   tr:hover {
     opacity: 0.7;
+  }
+
+  .without_data {
+    text-align: center;
+  }
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+
+  button {
+    border: none;
+    border-radius: 50%;
+    padding: 0.5rem;
+    background-color: transparent;
+    outline: none;
+    background-position: center;
+    transition: background-color 0.4s;
+
+    &:hover {
+      background-color: var(--button-without-focus);
+    }
+  }
+
+  svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+@media (max-width: 720px) {
+  .tableContent {
+    thead {
+      display: none;
+    }
+
+    td {
+      padding: 0.5rem 0;
+      padding-left: 1.225rem;
+
+      &:not(:last-child) {
+        display: block;
+      }
+    }
+  }
+
+  .actions {
+    svg {
+      width: 18px;
+      height: 18px;
+    }
   }
 }
