@@ -1,6 +1,8 @@
 ## 🔖 Sobre
 
 Este projeto foi desenvolvido como teste técnico requisitado em processo seletivo da empresa Tinnova.
+Foi fornecido uma [api](https://private-9d65b3-tinnova.apiary-mock.com/users) para servir os primeiros dados de uma lista de usuarios cadastrados e 
+a partir disso, poder criar, editar ou excluir novos cadastros através da persistência dos dados no LocalStorage do navegador.
 
 ---
 
